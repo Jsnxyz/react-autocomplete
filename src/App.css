@@ -18,5 +18,15 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: #777;
-  padding: 3rem; 
+  padding: 3rem;
+  margin: auto;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
 }
