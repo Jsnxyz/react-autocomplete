@@ -1,0 +1,107 @@
+.jGoPhPa08dfUvx48GjQw {
+  width: 100%;
+  margin-top: 5rem;
+}
+
+.sQiugNwJfWDRsSM3d_V5 {
+  position: relative;
+  display: inline-block;
+  width: 45rem;
+}
+
+.VpcWaZgDlfE3LbKj27Zl {
+  padding: 0.5rem 3.2rem 0.5rem 0.5rem;
+  line-height: 2rem;
+  width: 100%;
+}
+
+.ths6y7iDFER5p7jsJyza {
+  width: 2rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.7rem;
+  height: 2rem;
+  clear: both;
+  border: 0.4rem rgba(0, 0, 0, 0.25) solid;
+  border-top: 0.4rem black solid;
+  border-radius: 50%;
+  -webkit-animation: hBiniYuRQxt4C3eC7d3w 0.6s infinite linear;
+  animation: hBiniYuRQxt4C3eC7d3w 0.6s infinite linear;
+}
+
+.c38vDt7MhZrBq1ehKRVV {
+  margin-left: 2rem;
+  padding: 0.7rem;
+}
+
+@-webkit-keyframes hBiniYuRQxt4C3eC7d3w {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes hBiniYuRQxt4C3eC7d3w {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.eTy0E7hfbXvOnYISkErs {
+  width: 45rem;
+  border: solid 1px;
+  border-bottom: none;
+  z-index: 1;
+}
+
+.ZtfMuLRuNJAygau06TCQ {
+  font-size: 1.6rem;
+  border-bottom: solid 1px;
+  color: #000;
+  cursor: pointer;
+  padding-left: 0.5rem;
+}
+
+.ZtfMuLRuNJAygau06TCQ:hover {
+  background: #f5f4f4;
+}
+
+/* set universal element properties */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  margin: auto;
+}
+
+.container {
+  width: 600px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+/*# sourceMappingURL=main.css.map*/

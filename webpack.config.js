@@ -7,7 +7,7 @@ const webpack = require('webpack');
 module.exports = {
   // Where files should be sent once they are bundled
   output: {
-    path: path.join(__dirname, "/dist"),
+    path: path.join(__dirname, "/docs"),
     filename: "[name].[chunkhash].js",
   },
   resolve: {
