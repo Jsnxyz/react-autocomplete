@@ -113,7 +113,7 @@ function Autocomplete(props) {
         <input
           className={styles.search__input}
           type="text"
-          placeholder="Enter search query"
+          placeholder="Enter the pokémon you want to find"
           onChange={onChange}
           onFocus={onFocus}
           onClick={onFocus} // Since simply focus doesn't trigger updateQuery() with isFocused = true;
@@ -124,7 +124,7 @@ function Autocomplete(props) {
         {isSearching ? <div className={styles.sp}></div> : ""}
       </div>
 
-      <button className={styles.search__button} onClick={(e) => itemSelectHandler(state.typedUserQuery, e)}>Use Pokedex</button>
+      <button className={styles.search__button} onClick={(e) => itemSelectHandler(state.typedUserQuery, e)}>Use Pokédex ⚡</button>
 
       {state.pokemonList.length > 0 && isFocused && (
         <div className={styles.suggestions}>

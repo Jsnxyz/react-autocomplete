@@ -18,7 +18,7 @@ function App() {
   const fetchRenderedElement = fetchingPokemon ? <div className="fetching"></div> : '';
   return (
     <div className="container">
-      <h1>Find Pokemons</h1>
+      <h1>Find Pokémon</h1>
       <Autocomplete findPokemonHandler={findPokemonHandler}/>
       {result !== null && !fetchingPokemon? <Results result={result}/> : fetchRenderedElement}
     </div>
