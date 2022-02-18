@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "serve": "webpack serve --mode development --config dev.config.js",
+    "build": "webpack --mode production --config prod.config.js",
     "test": "jest"
   },
   "repository": {

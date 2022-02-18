@@ -6,12 +6,12 @@
 
 ## Acceptaince criterias
 
-- Webpage written in HTML, CSS and ReactJS
-- Search AutoCompletion component written in ReactJS Detailed code documentation
+- Webpage written in HTML, CSS and ReactJS :heavy_check_mark:
+- Search AutoCompletion component written in ReactJS Detailed code documentation :heavy_check_mark:
 
 ## Bonus Points for
 
-- Keyboard arrow controls
+- Keyboard arrow controls :heavy_check_mark:
 - JS Unit testing
-- Real live data
+- Real live data :heavy_check_mark:
 - Commit all steps into GitHub

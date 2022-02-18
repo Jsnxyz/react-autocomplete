@@ -1,21 +1,21 @@
-.jGoPhPa08dfUvx48GjQw {
+.ETz2cimZ_2OTXmqpCoaM {
   width: 100%;
   margin-top: 5rem;
 }
 
-.sQiugNwJfWDRsSM3d_V5 {
+.eApMIj3njZwt_tIQMJB5 {
   position: relative;
   display: inline-block;
   width: 45rem;
 }
 
-.VpcWaZgDlfE3LbKj27Zl {
+.NLEXhkFD38znHb0_Fl9g {
   padding: 0.5rem 3.2rem 0.5rem 0.5rem;
   line-height: 2rem;
   width: 100%;
 }
 
-.ths6y7iDFER5p7jsJyza {
+.wzPwO2m76BZ7yF0B0AIW {
   width: 2rem;
   position: absolute;
   right: 0.5rem;
@@ -25,16 +25,11 @@
   border: 0.4rem rgba(0, 0, 0, 0.25) solid;
   border-top: 0.4rem black solid;
   border-radius: 50%;
-  -webkit-animation: hBiniYuRQxt4C3eC7d3w 0.6s infinite linear;
-  animation: hBiniYuRQxt4C3eC7d3w 0.6s infinite linear;
+  -webkit-animation: cDgQaVdC9JdzsfazFjBl 0.6s infinite linear;
+  animation: cDgQaVdC9JdzsfazFjBl 0.6s infinite linear;
 }
 
-.c38vDt7MhZrBq1ehKRVV {
-  margin-left: 2rem;
-  padding: 0.7rem;
-}
-
-@-webkit-keyframes hBiniYuRQxt4C3eC7d3w {
+@-webkit-keyframes cDgQaVdC9JdzsfazFjBl {
   from {
     -webkit-transform: rotate(0deg);
   }
@@ -42,7 +37,7 @@
     -webkit-transform: rotate(359deg);
   }
 }
-@keyframes hBiniYuRQxt4C3eC7d3w {
+@keyframes cDgQaVdC9JdzsfazFjBl {
   from {
     transform: rotate(0deg);
   }
@@ -51,14 +46,21 @@
   }
 }
 
-.eTy0E7hfbXvOnYISkErs {
+.FQq12CzrqNrP2Zuc7H9S {
+  margin-left: 2rem;
+  padding: 0.7rem;
+}
+
+.O8Dsd5enCKfvGj4IhVyS {
   width: 45rem;
   border: solid 1px;
   border-bottom: none;
   z-index: 1;
+  position: absolute;
+  background: #fff;
 }
 
-.ZtfMuLRuNJAygau06TCQ {
+.GYFn6rf4SSDnGJkI_Kng {
   font-size: 1.6rem;
   border-bottom: solid 1px;
   color: #000;
@@ -66,10 +68,23 @@
   padding-left: 0.5rem;
 }
 
-.ZtfMuLRuNJAygau06TCQ:hover {
+.GYFn6rf4SSDnGJkI_Kng:hover, .GYFn6rf4SSDnGJkI_Kng.tabuywp0jW4S7n7j_KTx {
   background: #f5f4f4;
 }
 
+.Li9lJ9h52viAoxZ2qkg9 {
+    text-align: center;
+}
+
+.fbheYowO4_Rckvv9f4Ox {
+    text-transform: capitalize;
+    display: block;
+}
+
+.og6vN6d8WgrLMmEjbJSC {
+    margin-top: 3rem;
+    font-size: 2.5rem;
+}
 /* set universal element properties */
 *,
 *::after,
@@ -103,5 +118,32 @@ h1 {
   text-align: center;
 }
 
+.fetching {
+  width: 5rem;
+  height: 5rem;
+  margin: auto;
+  margin-top: 8rem;
+  clear: both;
+  border: 0.4rem rgba(0, 0, 0, 0.25) solid;
+  border-top: 0.4rem black solid;
+  border-radius: 50%;
+  -webkit-animation: spCircRot 0.6s infinite linear;
+  animation: spCircRot 0.6s infinite linear;
+}
 
-/*# sourceMappingURL=main.css.map*/
+@-webkit-keyframes spCircRot {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+@keyframes spCircRot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
