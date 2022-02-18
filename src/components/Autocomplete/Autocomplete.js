@@ -19,7 +19,7 @@ function Autocomplete(props) {
   const updateQuery = async () => {
     // A search query api call.
     if(!isFocused || state.userQuery.length === 0) {
-      dispatchState({type: 'UPDATE_LIST', pokemonList: []});
+      dispatchState({type: 'UPDATE_LIST', pokemonList: []}); // flush pokemon list when Input not focused.
       return;
     }
     setIsSearching(true);
