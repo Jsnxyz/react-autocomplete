@@ -9,6 +9,10 @@
     color: #003a70;
 }
 
+.result__img {
+    max-width: 100%;
+}
+
 .pokemon__nfound {
     margin-top: 3rem;
     font-size: 2.5rem;
