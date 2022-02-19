@@ -5,6 +5,9 @@ A simple page to find a pokemon. The page consists of a search/input box for use
 The highlight of the page is basic google like autocomplete behavior. \
 For autocomplete and result, [PokéAPI](https://pokeapi.co/) is used.
 
+## Live Demo
+Live demo can be found [here](https://jsnxyz.github.io/react-autocomplete/)
+
 ## Initial Steps - Development Mode
 
 In the project directory, run the follow commands in terminal sequentially for development mode.
