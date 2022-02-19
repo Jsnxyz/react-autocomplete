@@ -152,7 +152,7 @@ function Autocomplete(props) {
 
       <button 
         className={`${styles.search__button} ${isSearchButtonDisabled() ? styles['search__button--disabled'] : ''}`} 
-        onClick={(e) => itemSelectHandler(state.typedUserQuery, e)}
+        onClick={(e) => itemSelectHandler(state.userQuery, e)}
         disabled={isSearchButtonDisabled()}
         role="button"
         aria-label="Search for Pokemon"
