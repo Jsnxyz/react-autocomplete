@@ -3,7 +3,7 @@
 ## Introduction 
 A simple page to find a pokemon. The page consists of a search/input box for user to type. \
 The highlight of the page is basic google like autocomplete behavior. \
-For autocomplete and result, [ PokéAPI](https://pokeapi.co/) is used.
+For autocomplete and result, [PokéAPI](https://pokeapi.co/) is used.
 
 ## Initial Steps - Development Mode
 
@@ -25,3 +25,7 @@ Install dependencies like mentioned above.
 ### `npm run build`
 
 Builds the app for production to the `docs` folder. Open `docs/index.html` after build.
+
+## Running tests
+
+### `npm run test`

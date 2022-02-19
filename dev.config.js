@@ -65,7 +65,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new HtmlWebpackPlugin({ template: "./src/index.html" }),
+    new HtmlWebpackPlugin({ template: "./src/index.html", favicon: "./src/favicon.ico" }),
     new MiniCssExtractPlugin(),
     // new webpack.DefinePlugin({ //<--key to reduce React's size
     //   'process.env': {

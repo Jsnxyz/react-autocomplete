@@ -127,6 +127,8 @@ function Autocomplete(props) {
           onClick={onFocus} // Since simply focus doesn't trigger updateQuery() with isFocused = true;
           onBlur={onBlur}
           value={state.userQuery}
+          role="searchbox"
+          aria-label="Enter Pokemon name"
         />
         {isSearching ? <div className={styles.sp}></div> : ""}
         {state.pokemonList.length > 0 && isFocused && (
@@ -138,6 +140,7 @@ function Autocomplete(props) {
                   key={obj.id}
                   className={`${styles.suggestions__item} ${active}`}
                   onMouseDown={(e) => itemSelectHandler(obj.name, e)}
+                  aria-label={`suggested item: ${obj.name}`}
                 >
                   {obj.name}
                 </div>
@@ -151,6 +154,8 @@ function Autocomplete(props) {
         className={`${styles.search__button} ${isSearchButtonDisabled() ? styles['search__button--disabled'] : ''}`} 
         onClick={(e) => itemSelectHandler(state.typedUserQuery, e)}
         disabled={isSearchButtonDisabled()}
+        role="button"
+        aria-label="Search for Pokemon"
         >
           Use Pokédex ⚡
       </button>
