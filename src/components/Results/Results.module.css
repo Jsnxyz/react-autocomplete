@@ -5,6 +5,7 @@
 .result__link {
     text-transform: capitalize;
     display: block;
+    color: #003a70;
 }
 
 .pokemon__nfound {

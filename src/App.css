@@ -17,14 +17,19 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: #777;
+  color: #003a70;
   padding: 3rem;
   margin: auto;
+  background: #fff3c4;
 }
 
 .container {
-  width: 600px;
+  width: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
 h1 {

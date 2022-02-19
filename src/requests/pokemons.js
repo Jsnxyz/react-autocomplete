@@ -6,7 +6,7 @@ import "regenerator-runtime/runtime";
  * @returns {Pokemon[]} pokemonList
  */
 export async function searchPokemonByStartString(searchQuery) {
-  searchQuery = searchQuery.toLowerCase();
+  searchQuery = searchQuery.toLowerCase().trim();
   try {
     const response = await fetch("https://beta.pokeapi.co/graphql/v1beta", {
       method: "POST",
@@ -45,7 +45,7 @@ export async function searchPokemonByStartString(searchQuery) {
  * @returns {pokemonResult}
  */
 export async function findPokemon(value) {
-    value = value.toLowerCase();
+    value = value.toLowerCase().trim();
     const url = `https://pokeapi.co/api/v2/pokemon/${value}`;
     try {
         const response = await fetch(url);
@@ -53,7 +53,6 @@ export async function findPokemon(value) {
             return {name: value};
         }
         const data = await response.json();
-        console.log(data);
         const pokemonObj = {
             url,
             image: data.sprites.other['official-artwork'].front_default ?? data.sprites.front_shiny ?? null,

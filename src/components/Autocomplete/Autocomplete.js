@@ -18,7 +18,7 @@ function Autocomplete(props) {
    */
   const updateQuery = async () => {
     // A search query api call.
-    if(!isFocused || state.userQuery.length === 0) {
+    if(!isFocused || state.userQuery.trim().length === 0 || state.typedUserQuery.trim().length === 0) {
       dispatchState({type: 'UPDATE_LIST', pokemonList: []}); // flush pokemon list when Input not focused.
       return;
     }
@@ -48,7 +48,7 @@ function Autocomplete(props) {
    * @param {Event} e 
    */
   const onChange = (e) => {
-    dispatchState({type: 'AC_TYPED', typedUserQuery: e.target.value});
+    dispatchState({type: 'AC_TYPED', typedUserQuery: e.target.value});    
   };
 
   /**
@@ -69,6 +69,9 @@ function Autocomplete(props) {
 
   // A guard function to know if suggestions can be shown and is shown.
   const isAutoCompleteShown = () => state.pokemonList.length > 0 && isFocused;
+
+  // A guard function to check if button should be enabled or disabled
+  const isSearchButtonDisabled = () => state.typedUserQuery.trim().length === 0;
   
   /**
    * Function to handle suggestion select either via click or 'Enter' pressed.
@@ -78,6 +81,7 @@ function Autocomplete(props) {
    * @param {Event} e 
    */
   const itemSelectHandler = async(value, e) => {
+    if(!value.trim()) return;
     dispatchState({type: 'AC_SELECTED', userQuery: value});
     setIsFocused(false); // Hide Autocomplete.
     props.findPokemonHandler(value);
@@ -89,21 +93,24 @@ function Autocomplete(props) {
    * @param {Event} e 
    * @returns void
    */
-  const onKeyDown = (e) => {
-    if(!isAutoCompleteShown()) return;
+  const onKeyDown = (e) => { 
     const keyPressed = e.code;
     switch(keyPressed) {
         case 'ArrowUp':
+          if(!isAutoCompleteShown()) return;
           e.preventDefault(); // Disallow cursor going to beginning on ArrowUp press
           dispatchState({type: 'AC_ARROW_UP_PRESSED'});
           break;
         case 'ArrowDown':
+          if(!isAutoCompleteShown()) return;
           dispatchState({type: 'AC_ARROW_DOWN_PRESSED'});
           break;
         case 'Enter':
           itemSelectHandler(state.userQuery, e);
           break;
-        default: break;
+        default: 
+          dispatchState({type: 'AC_TYPED', typedUserQuery: e.target.value});
+          break;
     }
   }
 
@@ -114,34 +121,39 @@ function Autocomplete(props) {
           className={styles.search__input}
           type="text"
           placeholder="Enter the pokémon you want to find"
+          onKeyDown={onKeyDown}
           onChange={onChange}
           onFocus={onFocus}
           onClick={onFocus} // Since simply focus doesn't trigger updateQuery() with isFocused = true;
           onBlur={onBlur}
           value={state.userQuery}
-          onKeyDown={onKeyDown}
         />
         {isSearching ? <div className={styles.sp}></div> : ""}
+        {state.pokemonList.length > 0 && isFocused && (
+          <div className={styles.suggestions} role="suggestions">
+            {state.pokemonList.map((obj, i) => {
+              const active = i === state.suggestionIndex ? styles.active: '';
+              return (
+                <div
+                  key={obj.id}
+                  className={`${styles.suggestions__item} ${active}`}
+                  onMouseDown={(e) => itemSelectHandler(obj.name, e)}
+                >
+                  {obj.name}
+                </div>
+              );
+            })}
+          </div>
+        )}
       </div>
 
-      <button className={styles.search__button} onClick={(e) => itemSelectHandler(state.typedUserQuery, e)}>Use Pokédex ⚡</button>
-
-      {state.pokemonList.length > 0 && isFocused && (
-        <div className={styles.suggestions}>
-          {state.pokemonList.map((obj, i) => {
-            const active = i === state.suggestionIndex ? styles.active: '';
-            return (
-              <div
-                key={obj.id}
-                className={`${styles.suggestions__item} ${active}`}
-                onMouseDown={(e) => itemSelectHandler(obj.name, e)}
-              >
-                {obj.name}
-              </div>
-            );
-          })}
-        </div>
-      )}
+      <button 
+        className={`${styles.search__button} ${isSearchButtonDisabled() ? styles['search__button--disabled'] : ''}`} 
+        onClick={(e) => itemSelectHandler(state.typedUserQuery, e)}
+        disabled={isSearchButtonDisabled()}
+        >
+          Use Pokédex ⚡
+      </button>
     </div>
   );
 }
