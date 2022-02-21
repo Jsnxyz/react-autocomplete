@@ -1,8 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-// const CompressionPlugin = require('compression-webpack-plugin');
-// const webpack = require('webpack');
+const { ESBuildMinifyPlugin } = require('esbuild-loader');
 
 module.exports = {
   // Where files should be sent once they are bundled
@@ -46,9 +45,11 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /nodeModules/,
-        use: {
-          loader: "babel-loader",
-        },
+        loader: 'esbuild-loader',
+        options: {
+          loader: 'jsx',
+          target: 'es2015'
+        }
       },
       {
         test: /\.css$/,
@@ -75,6 +76,14 @@ module.exports = {
     // new webpack.optimize.AggressiveMergingPlugin(),
     // new CompressionPlugin({test: /\.js(\?.*)?$/i}),
   ],
+  optimization: {
+    minimizer: [
+      new ESBuildMinifyPlugin({
+        target: 'es2015',
+        css: true
+      })
+    ]
+  },
   // performance: {
   //   hints: "warning",
   //   // Calculates sizes of gziped bundles.

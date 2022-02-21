@@ -3,6 +3,7 @@ import Autocomplete from "./components/Autocomplete/Autocomplete";
 import Results from "./components/Results/Results";
 import { findPokemon } from "./requests/pokemons";
 import "./App.css";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 
 function App() {
   const [result, setResult] = useState(null);
@@ -19,8 +20,10 @@ function App() {
   return (
     <div className="container">
       <h1>Find Pokémon</h1>
-      <Autocomplete findPokemonHandler={findPokemonHandler}/>
-      {result !== null && !fetchingPokemon? <Results result={result}/> : fetchRenderedElement}
+      <ErrorBoundary>
+        <Autocomplete findPokemonHandler={findPokemonHandler}/>
+        {result !== null && !fetchingPokemon? <Results result={result}/> : fetchRenderedElement}
+      </ErrorBoundary>
     </div>
   );
 }

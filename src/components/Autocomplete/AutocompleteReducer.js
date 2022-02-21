@@ -61,7 +61,7 @@ const ACTIONS = {
     return {
       userQuery: action.typedUserQuery,
       pokemonList,
-      suggestionIndex,
+      suggestionIndex: -1,
       typedUserQuery: action.typedUserQuery,
     };
   }
